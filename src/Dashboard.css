@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+    /* margin-top:0;
+    margin-left: 0; */
+    /* margin-bottom: 0; */
+}
+.Dash1{
+    font-family: "Poppins", sans-serif;
+    /* background: beige; */
+}
+
+.cashflow{
+    border: 1.5px rgba(0, 0, 0, 0.122) solid;
+    padding:5px;
+    padding-left: 20px;
+    padding-right:80px;
+    padding-bottom: 30px;
+    border-radius: 20px;
+    transition: .2s linear;
+    background-color: white;
+
+}
+
+.cashflow:hover{
+    box-shadow: 0 8px 8px  rgba(0, 0, 0, 0.18);
+}
+.cashino{
+    color: rgb(82, 82, 82);
+    font-size: 15px;
+   padding: 0 20px;
+    width: 220px;
+}
+
+
+
+.cashin1 {
+  background-color: rgba(0, 128, 0, 0.134) !important;
+  
+}
+
+.cashin2 {
+  background-color: pink;
+
+ 
+}
+
+.cashin3 {
+ background-color: rgba(0, 128, 0, 0.134) !important;
+  
+}
+
+.cashin1p2{
+    font-size: 25px;
+    font-weight: 800;
+    color: rgba(0, 128, 0, 0.812);
+
+}
+
+.cashin2p2{
+    font-size: 25px;
+    font-weight: 800;
+    color: rgba(255, 0, 0, 0.575);
+}
+
+
+
+.thirdsection{
+    font-size:13px;
+    display: flex;
+    gap:20px;
+    opacity: 0.6;
+}
+
+.lastsection input{
+    background-color: rgba(221, 211, 211, 0.216);
+}
+.lastsection  button{
+    background: green !important;
+    color: white;
+}
+.thirdsection p{
+    background-color: rgba(221, 211, 211, 0.755);
+    padding: 5px 15px;
+    position: relative;
+    top:15px;
+    border-radius:10px;
+}
+
+
+
+.businessrunway{
+   border: 1.5px rgba(0, 0, 0, 0.122) solid;
+    padding:10px;
+    background-color: white;
+    border-radius: 20px;
+    transition: .2s linear;
+    font-size:15px;
+}
+
+
+.businessrunway:hover{
+    box-shadow: 0 5px 5px  rgba(0, 0, 0, 0.18);
+}
+
+.Expenses{
+    border: 1.5px rgba(0, 0, 0, 0.122) solid;
+    padding:10px;
+   background-color: white;
+    border-radius: 20px;
+    transition: .2s linear;
+    font-size:15px;
+}
+
+.Expenses:hover{
+     box-shadow: 0 5px 5px  rgba(0, 0, 0, 0.18);
+}
+
+.lastsection{
+     border: 1.5px rgba(0, 0, 0, 0.122) solid;
+    padding:10px;
+   background-color: white;
+    border-radius: 20px;
+    transition: .2s linear;
+    font-size:15px;
+    margin-bottom: 30px;
+    padding-bottom:30px ;
+
+    /* margin:50px; */
+}
+
+.lastsection:hover{
+     box-shadow: 0 5px 5px  rgba(0, 0, 0, 0.18);
+
+}
+.invoiic{
+    background-color: rgba(128, 128, 128, 0.124);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    /* text-align: end; */
+}
