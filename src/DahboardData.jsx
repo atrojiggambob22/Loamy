@@ -103,6 +103,7 @@ const dashboardData = {
       createdAt: "2026-04-12T09:00:00Z",
       isRead: true,
     },
+    
   ],
 
   // 💰 NEW: Expenses (very important for your Loamy idea)

@@ -17,7 +17,9 @@
     padding-bottom: 30px;
     border-radius: 20px;
     transition: .2s linear;
-    background-color: white;
+    background-color: rgba(244, 236, 204, 0.175);
+   
+    width:68% !important;
 
 }
 
@@ -27,7 +29,7 @@
 .cashino{
     color: rgb(82, 82, 82);
     font-size: 15px;
-   padding: 0 20px;
+    padding: 0 20px;
     width: 220px;
 }
 
@@ -91,10 +93,12 @@
 .businessrunway{
    border: 1.5px rgba(0, 0, 0, 0.122) solid;
     padding:10px;
-    background-color: white;
+    background-color: rgba(244, 236, 204, 0.175);
+    
     border-radius: 20px;
     transition: .2s linear;
     font-size:15px;
+    width: 30% !important;
 }
 
 
@@ -105,8 +109,9 @@
 .Expenses{
     border: 1.5px rgba(0, 0, 0, 0.122) solid;
     padding:10px;
-   background-color: white;
-    border-radius: 20px;
+    background-color: rgba(244, 236, 204, 0.175);
+   
+    border-radius: 30px;
     transition: .2s linear;
     font-size:15px;
 }
@@ -118,7 +123,8 @@
 .lastsection{
      border: 1.5px rgba(0, 0, 0, 0.122) solid;
     padding:10px;
-   background-color: white;
+    background-color: rgba(244, 236, 204, 0.175);
+  
     border-radius: 20px;
     transition: .2s linear;
     font-size:15px;
@@ -127,14 +133,100 @@
 
     /* margin:50px; */
 }
+.thirdsectionbigscreen{
+    display: none;
+}
 
 .lastsection:hover{
      box-shadow: 0 5px 5px  rgba(0, 0, 0, 0.18);
 
 }
 .invoiic{
-    background-color: rgba(128, 128, 128, 0.124);
-    border-radius: 15px;
+    background-color: rgba(128, 128, 128, 0.097);
+    border-radius: 30px;
     margin-bottom: 10px;
     /* text-align: end; */
+}
+.notification{
+     background-color: rgba(128, 128, 128, 0.051);
+}
+
+@media (min-width:200px) and (max-width:700px){
+    .originsection{
+        flex-direction:column !important;
+    }
+    .greetings{
+        margin-bottom: 10% !important;
+    }
+
+    .greetings h1{
+        font-size: 40px !important;
+    }
+
+     .greetings p{
+        font-size: 20px !important;
+    }
+
+     .cashflow{
+        width:105% !important;
+        margin-bottom: 20px;
+        position: relative;
+        left:-15px;
+    }
+    .cashino{
+        /* scale:0.; */
+        text-wrap: nowrap;
+        width:43%;
+        padding: 5px 7px;
+        padding-bottom:10px;
+        position: relative;
+        left:-15px;
+        /* margin-bottom: 20px; */
+    }
+
+    .cashin1p2{
+        border-radius: 5px !important;
+        padding:3px 0;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .cashin2p2{
+        /* padding: 6px ; */
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .Expenses22{
+        position: relative;
+        left: -14px;
+        width: 400px !important;
+
+    }
+
+    .invoicessss{
+        position: relative;
+        left: -10px;
+    }
+    .Expenses{
+         margin-bottom: 30px;
+    }
+     .businessrunway{
+        width:100% !important;
+    }
+
+    .lastsection input{
+        width:80% !important;
+    }
+    .thirdsection{
+        text-wrap:nowrap;
+        display: flex;
+        flex-direction: column;
+        gap:0px;
+    }
+    .thirdsectionbigscreen{
+        /* display: none !important; */
+    }
+   
 }

@@ -58,7 +58,7 @@ const Dashboard = () => {
       </nav>
 
      
-      <div style={{ marginBottom: "5%" }}>
+      <div style={{ marginBottom: "5%" }} className="greetings">
         <h1>Good Morning 👋</h1>
         <p>Here's your financial overview for today</p>
       </div>
@@ -69,7 +69,9 @@ const Dashboard = () => {
           display: "flex",
           marginBottom: "5%",
           justifyContent: "space-between",
+
         }}
+        className="originsection"
       >
         
         <div className="cashflow" >
@@ -82,36 +84,37 @@ const Dashboard = () => {
 
 
 
-            <div style={{borderRadius: "20px",}} className="cashin1 cashino">
-              <div>
-
+            <span style={{borderRadius: "20px",}} className="cashin1 cashino">
+              <div style={{display: "flex", gap: "5px", alignItems: "center",fontSize:"15px"}}>
+                 <FontAwesomeIcon icon={faWallet} style={{color:'green'}}/>
               <p>Cash In</p>
               </div>
               {/* <FontAwesomeIcon icon={faArrowDownLeft} /> */}
-              <p className="cashin1p2" >200,000</p>
-            </div>
+              <span className="cashin1p2">200,000</span>
+            </span>
 
 
 
 
-            <div style={{borderRadius: "20px",}} className="cashin2 cashino">
-              <div >
+            <span style={{borderRadius: "20px",}} className="cashin2 cashino">
+              <div style={{display: "flex", gap: "5px", alignItems: "center",fontSize:"15px"}}>
+                 <FontAwesomeIcon icon={faWallet} style={{color:'red'}}/>
               <p>Cash Out</p>
               </div>
                 
-              <p className="cashin2p2" >200,000</p>
-            </div>
+              <span className="cashin2p2" >200,000</span>
+            </span>
 
 
 
 
-            <div style={{ borderRadius: "20px",}} className="cashin3  cashino">
+            <span style={{ borderRadius: "20px",}} className="cashin3  cashino">
               <div style={{display: "flex", gap: "5px", alignItems: "center",fontSize:"15px"}}>
               <FontAwesomeIcon icon={faWallet} style={{color:'green'}}/>
               <p>Current Cash</p>
               </div>
-              <p className="cashin1p2" >200,000</p>
-            </div>
+              <span className="cashin1p2" >200,000</span>
+            </span>
 
            {/* <div style={{background:"red",}} >
               <div style={{display:"flex"}}>
@@ -141,17 +144,15 @@ const Dashboard = () => {
 
       </div>
 
+
+
         <div>
-
-
-         
-
 
         <div style={{
           display:"flex",justifyContent:"space-between",gap:"20px", flexWrap:"wrap"
         }}>
           
-            <div className="Expenses" style={{width: "500px"}}> 
+            <div className="Expenses Expenses22" style={{width: "500px"}}> 
 
               <h2>Expense Breakdown</h2>
               <ExpenseChart style={{ margin: "0 auto" }} />
@@ -160,17 +161,17 @@ const Dashboard = () => {
 
 
 
-            <div className="Expenses" >
+            <div className="Expenses invoicessss" >
 
                 <div style={{display: "flex", gap: "5px", alignItems: "center"}}>
                 <span><FontAwesomeIcon icon={faReceipt}/></span>
-                <h3>Invoice Tracker</h3>
+                <p style={{fontSize:"20px"}}>Invoice Tracker</p>
                 </div>
 
 
                 {/* 🧾 Invoices */}
               {invoices.map((inv) => (
-                <div key={inv.id} style={{display:"flex", gap:'120px', padding:'0 30px'}} className="invoiic" >
+                <div key={inv.id} style={{borderRadius:"20px", padding:"3px 10px", border:"1px solid rgba(0, 0, 0, 0.122)",marginBottom:"10px", display:"flex", gap:"150px"}} className="invoiic" >
 
                 <div>
 
@@ -194,9 +195,14 @@ const Dashboard = () => {
             </div>  
 
               <div className="Expenses">
-                {/* 🔔 Notifications */}
+                <div style={{display: "flex", gap: "5px", alignItems: "center"}}>
+                <FontAwesomeIcon icon={faBell}/>
+               <p style={{fontSize:"20px"}}>
+                Recent Notification
+               </p>
+                </div>
                 {notifications.map((note) => (
-                <div key={note.id}>
+                <div key={note.id} className="notification" style={{borderRadius:"20px", padding:"3px 10px", border:"1px solid rgba(0, 0, 0, 0.122)",marginBottom:"10px"}}>
                   <p>{note.message}</p>
                   <p>{note.createdAt}</p>
               </div>
@@ -231,8 +237,26 @@ const Dashboard = () => {
         
         <div className="thirdsection" >
           <p>Can I hire more sales assistants?</p>
+          
+         
           <p>What's my biggest expense this month?</p>
           <p>How much do customers owe me?</p>
+          
+          
+
+          
+        </div>
+         <div className="thirdsectionbigscreen" >
+          <p>Can I hire more sales assistants?</p>
+          <span className="thirdsectionbigscreenspan">
+
+          <p>What's my biggest expense this month?</p>
+          <p>How much do customers owe me?</p>
+          </span>
+          
+         
+
+          
         </div>
       </div>
     </div>
