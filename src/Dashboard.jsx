@@ -5,21 +5,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell, faCheck, faClock, faGear, faJetFighter, faMessage, faReceipt, faRightFromBracket, faWallet  } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft , fa} from "@fortawesome/free-solid-svg-icons/faArrowLeft";
 import { faGoogleWallet } from "@fortawesome/free-brands-svg-icons";
-
+import ProgressBar from  './ProgressBar'
 import dashboardData from "./DahboardData";
-// import { faArrowDownLeft } from "@fortawesome/free-solid-svg-icons";
-// If chart.html becomes a React component, import it like this:
-// import Chart from "./Chart";
+import { useNavigate } from "react-router-dom";
 
 
 
 // const { invoices, notifications, summary } = dashboardData;
 
 const Dashboard = () => {
- 
-  const { invoices, notifications, summary } = dashboardData;
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    // Perform logout logic here
+    navigate("/");
+  }
 
+  const { invoices, notifications, summary } = dashboardData;
   
+   const ProgressValue = 10;  
+  // const value =  ProgressBar.value;
   const formatDate = (date) => {
     return new Date(date).toLocaleDateString("en-NG", {
       month: "short",
@@ -30,7 +34,7 @@ const Dashboard = () => {
     <div style={{ padding: "0 20px" }} className="Dash1">
       
      
-      <nav style={{ display: "flex", justifyContent: "space-between" }}>
+      <nav style={{ display: "flex", gap:'80%', padding:"0 20px" }}>
         <div>
           <h3>Loamy</h3>
         </div>
@@ -49,7 +53,7 @@ const Dashboard = () => {
             <FontAwesomeIcon icon={faGear} />
           </div>
 
-          <div>
+          <div onClick={handleLogout} style={{cursor:"pointer"}}>
             <i className="fa-solid fa-right-from-bracket"></i>
           </div>
 
@@ -80,7 +84,7 @@ const Dashboard = () => {
           <p style={{ fontSize:"20px"}}>Cash Flow Overview</p>
           </div>
 
-          <div style={{ display: "flex",gap:"30px"}}>
+          <div style={{ display: "flex",gap:"30px"}} className="cheifofCashflow">
 
 
 
@@ -95,26 +99,52 @@ const Dashboard = () => {
 
 
 
-
-            <span style={{borderRadius: "20px",}} className="cashin2 cashino">
+          
+            
+            <span style={{borderRadius: "20px",}} className="cashin2 cashino testcahsin ">
               <div style={{display: "flex", gap: "5px", alignItems: "center",fontSize:"15px"}}>
                  <FontAwesomeIcon icon={faWallet} style={{color:'red'}}/>
               <p>Cash Out</p>
               </div>
-                
+               
               <span className="cashin2p2" >200,000</span>
             </span>
 
 
 
 
-            <span style={{ borderRadius: "20px",}} className="cashin3  cashino">
+            <span style={{ borderRadius: "20px",}} className="cashin3  cashino testcahsin">
               <div style={{display: "flex", gap: "5px", alignItems: "center",fontSize:"15px"}}>
               <FontAwesomeIcon icon={faWallet} style={{color:'green'}}/>
               <p>Current Cash</p>
               </div>
               <span className="cashin1p2" >200,000</span>
             </span>
+         
+
+
+          <div className="responsivecashflow" >
+            
+            <span style={{borderRadius: "20px",}} className="cashin2 cashino cashin44 cashin22">
+              <div style={{display: "flex", gap: "5px", alignItems: "center",fontSize:"15px"}}>
+                 <FontAwesomeIcon icon={faWallet} style={{color:'red'}}/>
+              <p>Cash Out</p>
+              </div>
+               
+              <span className="cashin2p2" >200,000</span>
+            </span>
+
+
+
+
+            <span style={{ borderRadius: "20px",}} className="cashin3  cashino cashin44">
+              <div style={{display: "flex", gap: "5px", alignItems: "center",fontSize:"15px"}}>
+              <FontAwesomeIcon icon={faWallet} style={{color:'green'}}/>
+              <p>Current Cash</p>
+              </div>
+              <span className="cashin1p2" >200,000</span>
+            </span>
+          </div>
 
            {/* <div style={{background:"red",}} >
               <div style={{display:"flex"}}>
@@ -131,14 +161,15 @@ const Dashboard = () => {
       
         <div className="businessrunway" > 
           <div style={{display: "flex", gap: "5px", alignItems: "center"}}>
-          <FontAwesomeIcon icon={faClock}/>
+          <FontAwesomeIcon icon={faClock} style={{color:"#f59e0b"}}/>
           <h3>Business Runway</h3>
           </div>
 
-          <p>Days</p>
+          <span style={{color:"#f59e0b", fontSize:"30px",fontWeight:"600" }} >{ProgressValue} Days</span>
           <p>
             At your current spending rate, you may run out of cash by
           </p>
+          <ProgressBar value={ProgressValue}  />
         </div>
 
 
@@ -155,7 +186,7 @@ const Dashboard = () => {
             <div className="Expenses Expenses22" style={{width: "500px"}}> 
 
               <h2>Expense Breakdown</h2>
-              <ExpenseChart style={{ margin: "0 auto" }} />
+              <ExpenseChart style={{ margin: "0 0" }} />
 
             </div>
 
@@ -180,7 +211,7 @@ const Dashboard = () => {
 
                 </div>
 
-                <div style={{position:"relative", top:"30px"}}> 
+                <div style={{position:"relative", top:"30px"}} className="invoicestatus" > 
 
                 <span style={{marginRight:"20px"}}>₦{inv.amount.toLocaleString()}</span>
               
@@ -218,7 +249,7 @@ const Dashboard = () => {
      
 
      
-      <div className="lastsection" style={{ marginTop: "5%" }}>
+      {/* <div className="lastsection" style={{ marginTop: "5%" }}>
         <div className="firstsection">
           <p>Ask Loamy </p>
         </div>
@@ -258,7 +289,7 @@ const Dashboard = () => {
 
           
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

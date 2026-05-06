@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from  "./assets/loamylogo.png";
 import { useNavigate } from "react-router-dom";
 const SignUp = () => {
   const navigate = useNavigate();
@@ -8,7 +9,16 @@ const SignUp = () => {
   }
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh" }} className="Loginform">
-      <h1>Loamy</h1>
+     <div style={{
+             display: "flex",
+             alignItems: "center",
+             position: "relative",
+             left: "300px",
+           }} className="logoandname">
+     
+           <img src={Logo} alt="Loamy Logo" style={{width:"10%"}} />
+           <h1>Loamy</h1>
+           </div>
       <p style={{opacity:"0.6",fontSize:"13px"}}>Create your account and take control of your finances . </p>
       <form>
 

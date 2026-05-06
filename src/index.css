@@ -20,3 +20,11 @@ body{
   color: #225a24;
 }
 
+@media (min-width:200px) and (max-width:800px) {
+  .Loginform{
+    overflow-x: hidden;
+  }
+  .logoandname{
+    left: 100px !important;
+  }
+  }

@@ -7,11 +7,12 @@ import Login from './Login.jsx'
 
 import './index.css'
 import SignUp from './SignUp'
+import ProgressBar from './ProgressBar.jsx';
 // import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   
+    {/* <ProgressBar value={40} /> */}
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />

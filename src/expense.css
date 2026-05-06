@@ -1,0 +1,21 @@
+
+@media (min-width:200px) and (max-width:800px) {
+  .carddd {
+    top: 10px !important;
+    left: -13px;
+    /* width: 80% !important; */
+  }
+  
+  .roww{
+    margin-bottom: 10px !important;
+  }
+  .legend{
+    flex: 0.8 !important;
+  }
+
+  .notee{
+    font-size:12px !important;
+    width: 90% !important;
+    text-wrap: nowrap;
+  }
+}

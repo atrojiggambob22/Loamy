@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from  "./assets/loamylogo.png";
 import { useNavigate } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
@@ -13,7 +14,16 @@ const Login = () => {
   };
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh" }} className="Loginform">
+      <span style={{
+        display: "flex",
+        alignItems: "center",
+        position: "relative",
+        left: "300px",
+      }} className="logoandname">
+
+      <img src={Logo} alt="Loamy Logo" style={{width:"10%"}} />
       <h1>Loamy</h1>
+      </span>
       <p style={{opacity:"0.6"}}>Welcome back. Login into your account. </p>
       <form>
 
