@@ -2,11 +2,11 @@ import React from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import './expense.css'
 const data = [
-  { name: "Foodstuff", value: 24, color: "#2E7D32" },
-  { name: "Store Rent", value: 48, color: "#D4A373" },
-  { name: "Light Bills", value: 12, color: "#F4A261" },
-  { name: "Transport", value: 10, color: "#1976D2" },
-  { name: "Miscellaneous", value: 6, color: "#E63946" },
+  { name: "Foodstuff", value: 24, color: "#768E52" },
+  { name: "Store Rent", value: 48, color: "#3A462E" },
+  { name: "Light Bills", value: 12, color: "#BBBD95" },
+  { name: "Transport", value: 10, color: "#D4DA7B" },
+  { name: "Miscellaneous", value: 6, color: "black" },
 ];
 
 export default function ExpenseChart() {

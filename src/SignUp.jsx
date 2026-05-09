@@ -11,12 +11,13 @@ const SignUp = () => {
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh" }} className="Loginform">
      <div style={{
              display: "flex",
+             justifyContent: "center",
              alignItems: "center",
              position: "relative",
-             left: "300px",
+            //  left: "32%",
            }} className="logoandname">
      
-           <img src={Logo} alt="Loamy Logo" style={{width:"10%"}} />
+           <img src={Logo} alt="Loamy Logo" style={{width:"5%"}} />
            <h1>Loamy</h1>
            </div>
       <p style={{opacity:"0.6",fontSize:"13px"}}>Create your account and take control of your finances . </p>

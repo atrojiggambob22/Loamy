@@ -10,7 +10,7 @@ const ProgressBar = ({ value }) => {
     <div style={{
       width: "100%",
       height: "10px",
-      background: "#e5e7eb",
+      background: "#D4DA7B",
       borderRadius: "20px",
       margin:"10px 0",
       overflow: "hidden"
@@ -18,7 +18,7 @@ const ProgressBar = ({ value }) => {
       <div style={{
         width: `${value}%`,
         height: "100%",
-        background: "#f59e0b",
+        background: "#768E52",
         transition: "width 0.3s linear",
       }} />
 

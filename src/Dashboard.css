@@ -10,7 +10,7 @@
     /* background: beige; */
 }
 
-   nav {
+   .thhenav {
     background-color: rgb(12, 59, 12); /* Use rgba for transparency */
     border-radius: 40px;
     color: white;
@@ -161,18 +161,36 @@
 
 }
 .invoiic{
-    background-color: rgba(128, 128, 128, 0.097);
+    background-color:#bbbd9581;
     border-radius: 30px;
     margin-bottom: 10px;
+   transition: .2s linear;
     /* text-align: end; */
 }
+.invoiic:hover{
+     box-shadow: 5px 10px 30px rgba(68, 66, 66, 0.215) inset;
+     /* height: 20%; */
+     transform: translateY(-5px);
+   transition: .2s linear;
+
+}
 .notification{
-     background-color: rgba(128, 128, 128, 0.051);
+    background-color:#bbbd9581;
+   transition: .2s linear;
+
+    
+}
+.notification:hover{
+     box-shadow: 5px 10px 30px rgba(68, 66, 66, 0.215) inset;
+     /* height: 20%; */
+     transform: translateY(-5px);
+   transition: .2s linear;
+
 }
 
 @media (min-width:200px) and (max-width:700px){
-    nav{
-        gap: 10px !important;
+    .thhenav{
+        gap: 100px !important;
         /* display: none !important; */
     }
     .originsection{
@@ -180,10 +198,15 @@
     }
     .greetings{
         margin-bottom: 10% !important;
+       
     }
-
+    
     .greetings h1{
-        font-size: 40px !important;
+        font-size: 30px !important;
+         text-wrap: nowrap;
+         position: relative;
+         top: 10px;
+
     }
 
      .greetings p{
@@ -254,23 +277,21 @@
     .Expenses22{
         position: relative;
         left: -14px;
-        width: 360px !important;
+        width: 94vw !important;
 
     }
 
     .invoicessss{
         position: relative;
         left: -15px;
-        width: 110% !important;
+        width: 95vw !important;
     }
     .invoicestatus{
         position: relative;
         left: -25px;
-        width: 110% !important;
+        width: 110%!important;
     }
-    .invoiic{
-        /* width: 50%; */
-    }
+   
     .Expenses{
          margin-bottom: 30px;
     }
@@ -291,4 +312,61 @@
     }
     
    
+}
+/* Tablet and small desktop responsiveness: 701px to 1100px */
+@media (min-width: 701px) and (max-width: 1100px) {
+    .thhenav {
+        gap: 60px !important;
+        padding: 18px 30px;
+        font-size: 18px;
+    }
+    .originsection {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    .greetings {
+        margin-bottom: 6% !important;
+    }
+    .greetings h1 {
+        font-size: 38px !important;
+    }
+    .greetings p {
+        font-size: 18px !important;
+    }
+    .cashflow,
+    .businessrunway,
+    .Expenses,
+    .lastsection {
+        width: 95% !important;
+        margin-bottom: 18px;
+        /* left: 0 !important; */
+        position: unset !important;
+    }
+    .cashino {
+        width: 100%;
+        padding: 5px 10px;
+        left: 0;
+        top: 10px;
+    }
+    .thirdsection {
+        flex-direction: column !important;
+        gap: 10px;
+    }
+    .invoiic,
+    .invoicessss,
+    .invoicestatus {
+        width: 100% !important;
+        left: 0 !important;
+        position: unset !important;
+    }
+    .lastsection input {
+        width: 90% !important;
+    }
+}
+@media (min-width: 428px) and (max-width: 470px) {
+    .Expenses22 {
+        width: 94vw !important;
+        left:-12px !important;
+        max-width: 430px;
+    }
 }

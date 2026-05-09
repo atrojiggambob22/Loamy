@@ -1,0 +1,79 @@
+.loamyfunc{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 0px 50px;
+
+
+}
+.loamyfuncSub{
+    background-color: white;
+    /* object-fit: contain !important; */
+    margin: 5px;
+    border-radius:20px;
+    /* width: 9px;0%; */
+
+    
+}
+.loamyfuncSub h4{
+    text-align: left !important;
+    position: relative;
+    left: 10%;
+}
+.loamyfuncSub p{
+    width:80%;
+    text-align: left !important;
+   position: relative;
+   left: 10%;
+}
+.homePnav{
+     background-color: green;
+     color: white;
+     padding: 20px;
+     border-radius:30px;
+}
+.homePnav span{
+    /* margin: 0px 10px; */
+}
+.heroFinance button{
+    padding:15px 40px;
+    border-radius: 12px;
+    border: none;
+    /* background: none; */
+}
+.thridHero{
+    text-align: left;
+     position: relative;
+    left: 31%;
+    top: 40px;
+    margin:5% 0;
+    background-color: white;
+   width: 45%;
+   border-radius: 20px;
+   padding: 20px 10px;
+}
+.thridHeroSub1{
+    text-align: left;
+   
+}
+.subthirdHero{
+    padding: 20px;
+    text-wrap: nowrap;
+    background-color: rgba(128, 128, 128, 0.082);
+    margin: 10px 0;
+    border-radius: 20px;
+}
+.LoamyWorks p{
+    width: 80%;
+    position: relative;
+    left:10%;
+   /* flex-basis: 80% !important; */
+}
+.LoamyWorks h4{
+    font-size:35px;
+    margin:10px;
+    opacity: 0.2;
+    color: green;
+}
+.LoamyWorks h5{
+    margin: 0;
+}

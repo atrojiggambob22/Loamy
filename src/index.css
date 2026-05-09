@@ -1,6 +1,6 @@
 body{
   font-family: "Poppins", sans-serif;
-  background-color: rgba(191, 191, 156, 0.206);
+  background-color: #bfbf9c35;
 }
 .Loginform input{
   padding: 10px ;
@@ -22,9 +22,14 @@ body{
 
 @media (min-width:200px) and (max-width:800px) {
   .Loginform{
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+     /* width: 100% !important; */
+     padding: 0 20px !important;
+  }
+  .Loginform img{
+    width: 13% !important;
   }
   .logoandname{
-    left: 100px !important;
+    /* left: 100px !important; */
   }
   }

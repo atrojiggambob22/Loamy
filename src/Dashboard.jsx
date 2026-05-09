@@ -12,8 +12,17 @@ import { useNavigate } from "react-router-dom";
 
 
 // const { invoices, notifications, summary } = dashboardData;
-
+function getGreeting() {
+  const hour = new Date().getHours();
+  if (hour < 12) return "Good morning";
+  if (hour < 18) return "Good afternoon";
+  return "Good evening";
+}
 const Dashboard = () => {
+
+  
+
+
   const navigate = useNavigate();
   const handleLogout = () => {
     // Perform logout logic here
@@ -34,16 +43,16 @@ const Dashboard = () => {
     <div style={{ padding: "0 20px" }} className="Dash1">
       
      
-      <nav style={{ display: "flex", gap:'80%', padding:"0 20px" }}>
+      <nav style={{ display: "flex", gap:'85%', padding:"0 20px" }} className="thhenav">
         <div>
           <h3>Loamy</h3>
         </div>
 
         <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
-            <div style={{ display: "flex", gap: "5px", }}>
+            {/* <div style={{ display: "flex", gap: "5px", }}>
               <i className="fa-regular fa-file-arrow-up" style={{position:'relative', top:'20px'}}></i>
               <p>Upload</p>
-          </div>
+          </div> */}
 
           <div>
             <i className="fa-regular fa-bell"></i>
@@ -63,7 +72,7 @@ const Dashboard = () => {
 
      
       <div style={{ marginBottom: "5%" }} className="greetings">
-        <h1>Good Morning 👋</h1>
+        <h1 >{getGreeting()}, 👋</h1>
         <p>Here's your financial overview for today</p>
       </div>
 
@@ -161,11 +170,11 @@ const Dashboard = () => {
       
         <div className="businessrunway" > 
           <div style={{display: "flex", gap: "5px", alignItems: "center"}}>
-          <FontAwesomeIcon icon={faClock} style={{color:"#f59e0b"}}/>
+          <FontAwesomeIcon icon={faClock} style={{color:"#768E52"}}/>
           <h3>Business Runway</h3>
           </div>
 
-          <span style={{color:"#f59e0b", fontSize:"30px",fontWeight:"600" }} >{ProgressValue} Days</span>
+          <span style={{color:"#768E52", fontSize:"30px",fontWeight:"600" }} >{ProgressValue} Days</span>
           <p>
             At your current spending rate, you may run out of cash by
           </p>
